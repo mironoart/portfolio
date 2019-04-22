@@ -1,0 +1,73 @@
+.displayPreloader
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100vh
+    position: absolute
+    background: black
+    z-index: 40
+    color: white
+    animation: closePreloader 2s linear 6s
+    animation-fill-mode: forwards
+
+@keyframes closePreloader
+    0%
+        opacity: 1
+    100%
+        opacity: 0
+    
+
+%greetings
+    display: grid
+    justify-content: center
+    align-items: center
+    justify-items: center
+    grid-template-rows:  1fr
+    p
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        z-index: 100
+        animation: preloader 1s ease-out
+
+.greetings1
+    @extend %greetings
+    grid-template-columns: repeat(8, 1fr)
+    width: 200px
+    p
+        font-size: 40px
+       
+.greetings2
+    @extend %greetings
+    grid-template-columns: repeat(23, 1fr)
+    width: 350px
+    p
+        font-size: 20px
+    
+#preloader
+    width: 100%
+    height: 100%
+    z-index: 30
+    position: absolute
+    img
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        z-index: 30
+
+
+@keyframes preloader
+    0%
+        transform: scale(0)
+    50%
+        transfrom: scale(1)
+    100%
+        transfrom: scale(0)
+
+
+.closePreloader
+    display: none
