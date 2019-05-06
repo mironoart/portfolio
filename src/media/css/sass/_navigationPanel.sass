@@ -1,0 +1,227 @@
+
+.main_navigation_panel 
+  display: flex
+  position: absolute
+  width: 100%
+  height: 100px
+  justify-content: space-between
+
+.menuContainer
+  display: flex
+  position: absolute
+  top: 10px
+  left: 10px
+  flex-direction: row
+  
+.menuIcon
+  display: flex 
+  align-items: center
+
+.dots
+  position: relative
+  width: 25px
+  height: 25px
+  margin-right: 40px
+  border: none
+  background: transparent
+  z-index: 10
+  cursor: pointer
+  &:focus 
+    outline: none
+  &:after, &:before, span
+    width: 20%
+    height: 20%
+    border-radius: 100px
+    border: solid 1px $homeBGC
+    position: absolute
+    left: 0px
+    transform: rotate(0deg)
+    transition:  all 0.4s
+    left:  1%
+    right:  1%
+    margin:  0 auto
+  &:after, &:before 
+    content: ""
+  &:after 
+    top: -10%
+    margin-top: 0px
+  &:before 
+    bottom: -10%
+    margin-bottom: 0px
+  span 
+    top: 50%
+    margin-top: -4px
+.on 
+  &:after 
+    border: none
+    background: $homeBGC
+    transform: rotate(135deg)translate(9px,-9px)
+    width:  100%
+  &:before  
+    transform: rotate(225deg)
+    bottom: 50%
+    margin-bottom: -2px
+    width:  100%
+  span 
+    transform: rotate(135deg)
+  &:after, &:before, span
+    border: none
+    background: $homeBGC
+
+      
+.navShown
+  display: visible
+  background: none
+  ul
+    margin-left: 10px
+    list-style: none
+  li
+    transition: all ease-in-out 0.5s
+    background: $homeBGC
+    padding: 10px
+    margin-left: 20px
+    border-radius: 50px
+    width: 20px
+    height: 20px
+    float: right
+    img
+      width: 100%
+      height: 100%
+    span
+      position: absolute
+      margin: 20px 0 0 -15px
+      width: 0px
+      height: 0px
+      overflow: hidden
+      opacity: 0
+      border-radius: 10px
+      padding: 5px
+      transition: all ease-in-out 0.4s
+    &:hover
+      span 
+        margin: 40px 0 0 -35px
+        opacity: 1
+        width: auto
+        height: auto
+
+
+
+
+
+.navHidden
+  visibility: hidden
+  ul
+    margin-left: 10px
+    list-style: none
+  li
+    transition: all ease-in-out 0.5s
+    background: $homeBGC
+    padding: 10px
+    margin-left: -40px
+    border-radius: 50px
+    width: 20px
+    height: 20px
+    float: right
+    img
+      width: 100%
+      height: 100%
+    span
+      opacity: 0
+ 
+
+.topRight
+  position: absolute
+  top: 10px
+  right: 30px
+  border: 1px solid white
+  padding: 5px
+  font-size: 20px
+  text-decoration: none
+  color: white
+  cursor: pointer
+  z-index: 3
+  transition: all .3s ease-in-out
+  &_projects
+      &:before
+          width: 0%
+          height: 100%
+          position: absolute
+          left: 0
+          top: 0
+          content: ""
+          background: white
+          transition: all .3s ease-in-out
+          z-index: -1
+      &:hover
+          padding: 10px
+          &:before
+              width: 100%
+  @media screen and (orientation: portrait)
+      position: fixed
+
+@keyframes aboutMeAnimation
+  0%
+      background-color: none
+      width: 50%
+
+  100%
+      background-color: blue
+      width: 100%
+
+
+.topRight_home
+  @media screen and (orientation: portrait)
+      background: $homeBGC
+  &:before
+          width: 0%
+          height: 100%
+          position: absolute
+          left: 0
+          top: 0
+          content: ""
+          background: white
+          transition: all .3s ease-in-out
+          z-index: -1
+          @media screen and (orientation: portrait)
+              background: $headsColor
+  &:hover
+      padding: 10px
+      color: $headsColor
+      @media screen and (orientation: portrait)
+          color: white
+      &:before
+          width: 100%
+            
+.langContainer
+  display: flex
+  position: absolute
+  grid-template-rows: auto
+  top: 0px
+  left: 0px
+  right: 0px
+  
+.lang
+  display: grid
+  margin: auto
+  grid-template-columns: 1fr 1fr
+  transition: all 1s linear
+
+.en
+  cursor: pointer
+  color: $textColor 
+  background-color: $homeBGC
+  padding-right: 2px
+  padding-left: 2px
+  border-radius: 0 0 0 5px 
+  
+.ru
+  cursor: pointer
+  color: $homeBGC
+  background-color: $textColor 
+  padding-right: 2px
+  padding-left: 2px
+  border-radius: 0 0 5px 0
+
+.active
+  background: none
+  cursor: default

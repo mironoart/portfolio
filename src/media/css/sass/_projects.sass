@@ -25,48 +25,6 @@
     100%
         background-color: rgba(0,0,0,0.8)
 
-.projectsTop
-    height: 50px
-
-.topRight
-    position: absolute
-    top: 0px
-    right: 20px
-    border: 1px solid white
-    padding: 5px
-    margin: 10px
-    font-size: 20px
-    text-decoration: none
-    color: white
-    cursor: pointer
-    z-index: 3
-    transition: all .3s ease-in-out
-    &_projects
-        &:before
-            width: 0%
-            height: 100%
-            position: absolute
-            left: 0
-            top: 0
-            content: ""
-            background: white
-            transition: all .3s ease-in-out
-            z-index: -1
-        &:hover
-            padding: 10px
-            &:before
-                width: 100%
-    @media screen and (orientation: portrait)
-        position: fixed
-
-@keyframes aboutMeAnimation
-    0%
-        background-color: none
-        width: 50%
-
-    100%
-        background-color: blue
-        width: 100%
 
 
 .projectsContent

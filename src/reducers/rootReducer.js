@@ -1,15 +1,10 @@
-import  {combineReducers} from 'redux';
-import changeLanguage from './home.js';
-import modalMenu from './modal.js';
-import projects from './projects.js';
-import preloader from './preloader.js';
-
+import { combineReducers } from 'redux'
+import changeLanguage from './home.js'
+import projects from './projects.js'
 
 const rootReducer = combineReducers({
-    changeLanguage,
-    modalMenu,
-    projects,
-    preloader,
+   changeLanguage,
+   projects
 })
 
-export default rootReducer;
+export default rootReducer
