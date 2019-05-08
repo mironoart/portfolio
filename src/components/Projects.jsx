@@ -1,69 +1,152 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import $ from 'jquery'
+import { HomeButton, LangButtons } from './NavigationComponents'
 
+class Parallax {
+   constructor(object) {
+      this.object = object
+      this.offset = this.object.offset().top
+      this.object.css(
+         'background-position-y',
+         `-${this.offset + $(window).scrollTop() / 4}px`
+      )
+   }
+   parallax() {
+      this.object.css(
+         'background-position-y',
+         `-${this.offset + $(window).scrollTop() / 4}px`
+      )
+   }
+}
+
+class ParallaxEffect extends React.Component {
+   componentDidMount() {
+      var el = $(this.el)
+
+      var parallax = new Parallax(el)
+      $(window).scroll(function() {
+         parallax.parallax()
+      })
+   }
+
+   render() {
+      const { image, children } = this.props
+      return (
+         <div
+            className="parallax"
+            ref={el => (this.el = el)}
+            style={{
+               backgroundImage: `url(../${image})`
+            }}
+         >
+            {children}
+         </div>
+      )
+   }
+}
+
+function ProjectHeader({ text }) {
+   return (
+      <div className="projectsHeader">
+         <div className="projectsHeader__projectName">
+            <h1 id={text.id}>{text.projectName}</h1>
+            <p> {text.credo} </p>
+         </div>
+
+         <div className="projectsHeader__projectIntroduction">
+            <p> {text.text}</p>
+         </div>
+      </div>
+   )
+}
+
+function ProjectInfo({ text }) {
+   return (
+      <div className="projectInfo">
+         <ul>
+            <li>
+               {text.info.roleName} {text.role}
+            </li>
+            <li>
+               {text.info.dateName} {text.info.dateDesc}
+            </li>
+            <li>
+               <a href={text.siteLink}> {text.site} </a>
+            </li>
+         </ul>
+      </div>
+   )
+}
+
+function ProjectProblem({ text }) {
+   return (
+      <div className="projectProblem">
+         <p>{text.problem}</p>
+      </div>
+   )
+}
+
+function ProjectObjectives({ text }) {
+   return (
+      <div className="projectObjectives">
+         <h3> {text.objectiveTitle} </h3>
+         <ul>
+            {text.objectives.map(objective => {
+               return <li> {objective} </li>
+            })}
+         </ul>
+      </div>
+   )
+}
+
+function ProjectResult({ text }) {
+   return (
+      <div className="projectResults">
+         <h3> {text.resultTitle} </h3>
+         <ul>
+            {text.result.map(result => {
+               return <li> {result} </li>
+            })}
+         </ul>
+      </div>
+   )
+}
+
+function ProjectStack({ text }) {
+   return (
+      <div className="projectStack">
+         <h3> {text.technologyStackTitle} </h3>
+         {text.technologyStack.map(technology => {
+            return <li> {technology} </li>
+         })}
+      </div>
+   )
+}
 class Projects extends React.Component {
-	render() {
-		return (
-			<div className="projectsContainer">
-				<img className="projectsBackgroundImg" src={require(`../${this.props.text.image}`)} alt="" />
+   render() {
+      const text = this.props.text
+      const headerParallaxImg = require(`../${text.image}`)
 
+      return (
+         <div className="projectsContainer">
+            <div className="navigationPanel">
+               <HomeButton id={text.id} text={text.aboutme} />
+               <LangButtons text={text} props={this.props} />
+            </div>
 
+            <ParallaxEffect image={headerParallaxImg}>
+               <ProjectHeader text={text} />
+            </ParallaxEffect>
 
-				<div className="projectsTop">
-					<Link id={this.props.text.id} className="topRight topRight_projects" to="/">
-						{this.props.text.aboutme}
-					</Link>
-
-					<div className="langContainer">
-						<div className="lang lang-projects">
-							<span
-								className={this.props.text.active === 'en' ? 'en ' + `${this.props.text.id}` : 'en'}
-								onClick={() => this.props.changeLangToEn()}
-							>
-								En
-							</span>
-							<span
-								className={this.props.text.active === 'ru' ? 'ru  ' + `${this.props.text.id}` : 'ru'}
-								onClick={() => this.props.changeLangToRu()}
-							>
-								Ru
-							</span>
-						</div>
-					</div>
-				</div>
-
-				<div className="projectsContent">
-					<div className="projectHead">
-						<h6 className="projectHead__role">{this.props.text.role}</h6>
-						<div className="projectHead__projectName">
-							<h1 id={this.props.text.id}>{this.props.text.projectName}</h1>
-							<p> {this.props.text.credo} </p>
-						</div>
-						<div className="projectHead__projectInfo">
-							<div className="Date">
-								<p>{this.props.text.info.dateDesc}</p>
-							</div>
-						</div>
-					</div>
-
-					<div className="projectCenter">
-						<div className="projectCenter__projectIntroduction">
-							<h3>{this.props.text.introduction}</h3>
-							<p> {this.props.text.text}</p>
-						</div>
-						<div className="projectsLink">
-							<a id={this.props.text.id} href={this.props.text.siteLink}>
-								{this.props.text.site}
-							</a>
-						</div>
-					</div>
-					<div className="projectCenter__projectNext">
-						<p onClick={() => this.props.nextProject()}>{this.props.text.right}</p>
-					</div>
-				</div>
-			</div>
-		)
-	}
+            <ProjectInfo text={text} />
+            <ProjectProblem text={text} />
+            <ProjectObjectives text={text} />
+            <ProjectResult text={text} />
+            <ProjectStack text={text} />
+            <div className="projectNext">Look Next divroject...</div>
+         </div>
+      )
+   }
 }
 
 export default Projects

@@ -13,6 +13,14 @@ export function ProjectsButton({ text }) {
    )
 }
 
+export function HomeButton({ text, id }) {
+   return (
+      <Link id={id} className="topRight topRight_projects" to="/">
+         {text}
+      </Link>
+   )
+}
+
 export function LangButtons({ text, props }) {
    return (
       <div className="langContainer">

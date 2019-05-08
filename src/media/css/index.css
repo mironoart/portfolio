@@ -7,7 +7,7 @@ html {
   margin: 0px;
   padding: 0px; }
 
-.main_navigation_panel {
+.navigationPanel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -292,206 +292,6 @@ html {
   background: none;
   cursor: default; }
 
-.projectsContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  background: no-repeat center center fixed;
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-color: rgba(0, 0, 0, 0.8);
-  overflow-y: scroll;
-  -webkit-animation: test 2s linear;
-          animation: test 2s linear; }
-
-.projectsBackgroundImg {
-  position: absolute;
-  z-index: -100;
-  width: 100%;
-  height: 100vh;
-  background-color: black; }
-
-@-webkit-keyframes test {
-  0% {
-    background-color: black; }
-  100% {
-    background-color: rgba(0, 0, 0, 0.8); } }
-
-@keyframes test {
-  0% {
-    background-color: black; }
-  100% {
-    background-color: rgba(0, 0, 0, 0.8); } }
-
-.projectsContent {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: white; }
-
-.projectHead {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  width: 100%;
-  height: 100%;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .projectHead__role {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-align-self: end;
-        -ms-flex-item-align: end;
-            align-self: end;
-    font-size: 15px; }
-  .projectHead__projectName {
-    text-align: center; }
-    .projectHead__projectName h1 {
-      -webkit-transition: all 0.5s linear;
-      -o-transition: all 0.5s linear;
-      transition: all 0.5s linear;
-      font-size: 50px; }
-    .projectHead__projectName p {
-      font-size: 20px; }
-  .projectHead__projectInfo {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-    .projectHead__projectInfo div {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-justify-content: space-around;
-          -ms-flex-pack: distribute;
-              justify-content: space-around;
-      height: 20px;
-      margin-left: 15px;
-      margin-right: 15px; }
-      .projectHead__projectInfo div strong {
-        height: 20px; }
-      .projectHead__projectInfo div p {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        height: 20px;
-        margin-left: 5px; }
-
-.projectCenter {
-  display: grid;
-  grid-template-rows: 3fr 1fr; }
-  .projectCenter__projectIntroduction {
-    display: grid;
-    grid-template-rows: 1fr 3fr;
-    justify-items: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .projectCenter__projectIntroduction h3 {
-      font-size: 25px;
-      -webkit-transition: all 0.5s linear;
-      -o-transition: all 0.5s linear;
-      transition: all 0.5s linear; }
-    .projectCenter__projectIntroduction p {
-      text-align: center;
-      font-family: 'Cormorant Infant', serif;
-      font-size: 1.4em;
-      text-indent: 2em;
-      line-height: 1.5em; }
-  .projectCenter__projectNext {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    cursor: pointer; }
-    .projectCenter__projectNext p {
-      padding: 10px; }
-
-.projectsLink {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  margin-top: 20px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-decoration: none;
-  font-size: 20px;
-  margin-bottom: 20px; }
-  .projectsLink a {
-    -webkit-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear; }
-
-.lang-projects span {
-  background: none !important;
-  color: white;
-  -webkit-border-radius: 0;
-          border-radius: 0; }
-
-#hiromantProject {
-  color: #bea968; }
-
-#velaProject {
-  color: #243df2; }
-
-.velaProject {
-  border-bottom: solid 1px #243df2; }
-
-.hiromantProject {
-  border-bottom: solid 1px #bea968; }
-
-.testClass {
-  position: absolute;
-  width: 200%;
-  height: 100vh;
-  -webkit-filter: blur(5px);
-          filter: blur(5px); }
-
 .displayPreloader {
   display: -webkit-box;
   display: -webkit-flex;
@@ -667,3 +467,186 @@ html {
   @media screen and (orientation: portrait) {
     .homeAboutMe {
       overflow-y: hidden; } }
+
+.parallax {
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  width: 100%;
+  height: 60vh; }
+
+.projectsContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-animation: test 2s linear;
+          animation: test 2s linear; }
+
+@-webkit-keyframes test {
+  0% {
+    background-color: black; }
+  100% {
+    background-color: rgba(0, 0, 0, 0.8); } }
+
+@keyframes test {
+  0% {
+    background-color: black; }
+  100% {
+    background-color: rgba(0, 0, 0, 0.8); } }
+
+.projectsContent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white; }
+
+.projectsHeader {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  color: white;
+  text-align: center; }
+  .projectsHeader h1 {
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    font-size: 50px; }
+  .projectsHeader p {
+    font-size: 20px; }
+  .projectsHeader__projectIntroduction h3 {
+    font-size: 25px;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
+  .projectsHeader__projectIntroduction p {
+    text-align: center;
+    font-family: 'Cormorant Infant', serif;
+    font-size: 1.4em;
+    text-indent: 2em;
+    line-height: 1.5em; }
+
+/*     &__role
+        display: flex
+        justify-content: center
+        align-self: end
+        font-size: 15px
+    &__projectInfo
+        display: flex
+        justify-content: center
+        div
+            display: flex
+            justify-content: space-around
+            height: 20px
+            margin-left: 15px
+            margin-right: 15px
+            strong
+                height: 20px
+            p
+                display: flex
+                height: 20px
+                margin-left: 5px
+
+     */
+.projectCenter {
+  display: grid;
+  grid-template-rows: 3fr 1fr; }
+  .projectCenter__projectNext {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    cursor: pointer; }
+    .projectCenter__projectNext p {
+      padding: 10px; }
+
+.projectsLink {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  font-size: 20px;
+  margin-bottom: 20px; }
+  .projectsLink a {
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
+
+.lang-projects span {
+  background: none !important;
+  color: white;
+  -webkit-border-radius: 0;
+          border-radius: 0; }
+
+#hiromantProject {
+  color: #bea968; }
+
+#velaProject {
+  color: #243df2; }
+
+.velaProject {
+  border-bottom: solid 1px #243df2; }
+
+.hiromantProject {
+  border-bottom: solid 1px #bea968; }
+
+.testClass {
+  position: absolute;
+  width: 200%;
+  height: 100vh;
+  -webkit-filter: blur(5px);
+          filter: blur(5px); }

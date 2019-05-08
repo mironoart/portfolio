@@ -33,7 +33,7 @@ class Home extends React.Component {
 
       return (
          <div className="homeContainer">
-            <div className="main_navigation_panel">
+            <div className="navigationPanel">
                <MenuButton
                   isNavShownClass={state.isNavShownClass}
                   menuIconClass={state.menuIconClass}
