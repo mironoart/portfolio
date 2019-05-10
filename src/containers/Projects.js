@@ -1,7 +1,7 @@
-import { connect } from "react-redux"
-import { changeLangToRu, changeLangToEn } from "../actions/HomeActions.js"
-import { nextProject, prevProject } from "../actions/projectActions.js"
-import Projects from "../components/Projects.jsx"
+import { connect } from 'react-redux'
+import { changeLangToRu, changeLangToEn } from '../actions/HomeActions.js'
+import { nextProject, prevProject } from '../actions/projectActions.js'
+import Projects from '../components/Projects.jsx'
 
 const mapStateToProjectsProps = state => {
    const text = state.projects

@@ -13,7 +13,7 @@
     background-attachment: fixed
     background-position: center center
     width: 100%
-    height: 60vh
+    height: 100vh
 
 .projectsContainer
     display: flex
@@ -21,7 +21,6 @@
     width: 100%
     background: no-repeat center center fixed
     background-size: cover
-    background-color: rgba(0,0,0,0.8)
     animation: test 2s linear
 
 
@@ -31,15 +30,6 @@
     100%
         background-color: rgba(0,0,0,0.8)
 
-
-
-.projectsContent
-    display: flex
-    max-width: 1000px
-    margin-left: auto
-    margin-right: auto
-    flex-direction: column
-    color: white
 
 .projectsHeader
     display: flex
@@ -58,6 +48,7 @@
     p
         font-size: 20px
     &__projectIntroduction
+        margin: 0 30px 0 30px
         h3
             font-size: 25px
             transition: all 0.5s linear
@@ -67,76 +58,95 @@
             font-size: 1.4em
             text-indent: 2em
             line-height: 1.5em       
-/*     &__role
-        display: flex
-        justify-content: center
-        align-self: end
-        font-size: 15px
     &__projectInfo
         display: flex
-        justify-content: center
-        div
+        position: absolute
+        bottom: 20px
+        left: 20px
+        ul
+            list-style: none
             display: flex
-            justify-content: space-around
-            height: 20px
-            margin-left: 15px
-            margin-right: 15px
-            strong
-                height: 20px
-            p
-                display: flex
-                height: 20px
-                margin-left: 5px
-                
-     */
-.projectCenter
-    display: grid
-    grid-template-rows: 3fr 1fr
-      
+            flex-direction: column
+            li
+                text-align: start
 
-    &__projectNext
-        display: flex
-        width: 100%
-        height: 100%
-        align-items: center
-        justify-content: center
-        cursor: pointer
-        p
-            padding: 10px
-
-
-.projectsLink
+.projectContent
+    mark
+        background: none
+        color: #02FFFF
     display: flex
-    width: 100%
-    margin-top: 20px
-    justify-content: center
-    text-decoration: none
-    font-size: 20px
-    margin-bottom: 20px
-    a
-        transition: all 0.5s linear
+    flex-direction: column
+    margin: 10px
 
-.lang-projects
-    span
-        background: none !important
+
+.mainProblem
+    margin: 5% 0 10% 0
+    text-align: center
+    color: white
+
+
+.projectObjective
+    display: flex
+    width: 50%
+    flex-direction: column
+    justify-content: flex-start
+    color: white
+    h2
+        margin-bottom: 20px
+
+.projectExplanation
+    display: grid
+    margin-top: 100px
+    grid-template-rows: auto 1fr 300px auto
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    grid-gap: 40px
+    color: white
+    h2
+        grid-column-start: 1
+        grid-column-end: 6
+    &__problem
+        grid-column-start: 2
+        grid-column-end: 3
+    &__solution
+        grid-column-start: 4
+        grid-column-end: 5
+
+    figure
+        grid-column-start: 2
+        grid-column-end: 5
+        img
+            width: 100%
+            height: 100%
+            max-height: 100%
+    &__imageText
+        grid-column-start: 2
+        grid-column-end: 5
+        text-align: center
+
+.projectStack
+    display: flex
+    flex-direction: column
+    margin: 10% auto 10% auto
+    h3
+        text-align: center
+        margin: 20px
         color: white
-        border-radius: 0
+    figure
+        img
+            margin: 5px
+            width: 50px
+            height: 50px
+            max-heigiht: 100%
 
-#hiromantProject
-    color: #bea968
+.footer
+    display: flex
+    justify-content: space-between
+    h3
+        margin: 30px
+        color: white
 
-#velaProject
-    color: #243df2
 
-.velaProject
-    border-bottom: solid 1px #243df2
 
-.hiromantProject
-    border-bottom: solid 1px #bea968
 
-.testClass
-    position: absolute
-    width: 200%
-    height: 100vh
-    filter: blur(5px)
+
     
