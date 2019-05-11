@@ -156,8 +156,6 @@
           padding: 10px
           &:before
               width: 100%
-  @media screen and (orientation: portrait)
-      position: fixed
 
 @keyframes aboutMeAnimation
   0%
@@ -199,7 +197,9 @@
   top: 0px
   left: 0px
   right: 0px
-  
+  @media screen and (max-width: 768px) 
+    display: none
+
 .lang
   display: grid
   margin: auto

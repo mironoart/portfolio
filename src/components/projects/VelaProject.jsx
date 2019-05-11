@@ -17,7 +17,7 @@ function ProjectHeader({ text }) {
       <div className="projectsHeader">
          <div className="projectsHeader__projectName">
             <h1 id={text.id}>{text.projectName}</h1>
-            <p> {text.credo} </p>
+            <h2> {text.credo} </h2>
          </div>
 
          <div className="projectsHeader__projectIntroduction">
@@ -60,7 +60,6 @@ class Projects extends React.Component {
          >
             <div className="navigationPanel">
                <HomeButton id={text.id} text={text.aboutme} />
-               <LangButtons text={text} props={this.props} />
             </div>
 
             <ParallaxEffect image={headerParallaxImg}>
@@ -77,14 +76,14 @@ class Projects extends React.Component {
                </p>
                <section className="projectObjective">
                   <h2>Objective</h2>
-                  <i>
+                  <p>
                      Create markish language educational site based on watching
                      TV shows with subtitles, also implement
-                     <mark>custom videoplayer</mark>
-                     with handle <mark>subtitle manipulation</mark>,
-                     <mark>authorisation system</mark> and <mark>database</mark>
-                     .
-                  </i>
+                     <mark> custom videoplayer </mark>
+                     with handle <mark> subtitle manipulation</mark>,
+                     <mark> authorisation system </mark> and
+                     <mark> database</mark>.
+                  </p>
                </section>
                <section className="projectExplanation">
                   <h2>Main Page</h2>
@@ -100,18 +99,18 @@ class Projects extends React.Component {
                      <p>
                         Was created design of the site in dark tones. Which was
                         inspired by:
-                        <br /> <mark>Ororo.tv</mark> <br />
-                        <mark>Netflix.com</mark> <br />
-                        <mark>Europixhd.net</mark>
+                        <br /> <mark> Ororo.tv </mark> <br />
+                        <mark> Netflix.com </mark> <br />
+                        <mark> Europixhd.net </mark>
                      </p>
                   </div>
                   <figure>
                      <img src={VelaMainPageImage} />
                   </figure>
                   <p className="projectExplanation__imageText">
-                     Main page included <mark>live walpaper</mark> wich
+                     Main page included <mark> live walpaper </mark> wich
                      instantly attached attention. Also was implemented
-                     <mark> live search</mark> and <mark>live scroll</mark>.
+                     <mark> live search </mark> and <mark> live scroll</mark>.
                   </p>
                </section>
                <section className="projectExplanation">
@@ -136,8 +135,8 @@ class Projects extends React.Component {
                   </figure>
                   <p className="projectExplanation__imageText">
                      Second page included easy way to switch TV shows, ability
-                     to <mark>add favorite series </mark>and
-                     <mark>post comments</mark>.
+                     to <mark> add favorite series </mark>and
+                     <mark> post comments </mark>.
                   </p>
                </section>
                <section className="projectExplanation">
@@ -158,12 +157,12 @@ class Projects extends React.Component {
                   </figure>
                   <p className="projectExplanation__imageText">
                      Now user can easyly manipulate subtitles: <br />
-                     <mark>moving</mark>, <mark>swithing</mark>,<mark>etc</mark>
-                     .
+                     <mark> moving</mark>, <mark> swithing</mark>,
+                     <mark> etc</mark>.
                   </p>
                </section>
                <section className="projectStack">
-                  <h3> Stack of technologies</h3>
+                  <h2> Stack of technologies</h2>
                   <figure>
                      <img src={HTML5} />
                      <img src={CSS3} />

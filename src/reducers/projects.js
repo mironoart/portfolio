@@ -1,7 +1,7 @@
 const velaProjectEn = {
    id: 'velaProject',
    role: 'Full-Stack',
-   projectName: 'VELA',
+   projectName: 'Vela',
    credo: 'Ver Escuchar Leer Aprender',
    image: 'media/images/Vela.jpg',
    problem:
@@ -56,7 +56,7 @@ const velaProjectEn = {
 const velaProjectRu = {
    id: 'velaProject',
    role: 'Full-Stack',
-   projectName: 'VELA',
+   projectName: 'Vela',
    credo: 'Ver Escuchar Leer Aprender',
    image: 'media/images/Vela.jpg',
    problem:
