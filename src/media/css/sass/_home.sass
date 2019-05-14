@@ -1,3 +1,4 @@
+
 @mixin border($color)
     border: solid $color 1px
     
@@ -8,20 +9,10 @@
     display: grid
     grid-template-columns: 1fr 1fr
     grid-template-rows: 100vh
-    @media screen and (orientation: portrait) 
+    @media screen and (max-width: 768px) 
         grid-template-columns: 1fr
 
-.portrait
-    display: flex
-    align-items: center
-    justify-content: center
-    background-color: #fbfbfb
-    img
-        width: 400px
-        height: 400px
-        @media screen and (orientation: portrait) 
-            width: 100px
-            height: 100px
+
 
 .homeAboutMe
     background-color: $homeBGC
@@ -49,5 +40,5 @@
         cursor: pointer
     span
         width: 10%
-    @media screen and (orientation: portrait) 
+    @media screen and (max-width: 768px) 
         overflow-y: hidden

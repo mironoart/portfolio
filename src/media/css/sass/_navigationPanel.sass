@@ -168,7 +168,7 @@
 
 
 .topRight_home
-  @media screen and (orientation: portrait)
+  @media screen and (max-width: 768px)
       background: $homeBGC
   &:before
           width: 0%
@@ -180,12 +180,12 @@
           background: white
           transition: all .3s ease-in-out
           z-index: -1
-          @media screen and (orientation: portrait)
+          @media screen and (max-width: 768px)
               background: $headsColor
   &:hover
       padding: 10px
       color: $headsColor
-      @media screen and (orientation: portrait)
+      @media screen and (max-width: 768px)
           color: white
       &:before
           width: 100%

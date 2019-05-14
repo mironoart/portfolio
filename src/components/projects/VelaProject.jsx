@@ -1,5 +1,5 @@
 import React from 'react'
-import { HomeButton, LangButtons } from '../NavigationComponents'
+import { HomeButton } from '../NavigationComponents'
 import ParallaxEffect from '../../common/parallaxEffect'
 import VelaMainPageImage from '../../media/images/vela_main.png'
 import VelaSerialsPageImage from '../../media/images/vela_serials.jpg'
@@ -105,7 +105,7 @@ class Projects extends React.Component {
                      </p>
                   </div>
                   <figure>
-                     <img src={VelaMainPageImage} />
+                     <img src={VelaMainPageImage} alt="Main Page" />
                   </figure>
                   <p className="projectExplanation__imageText">
                      Main page included <mark> live walpaper </mark> wich
@@ -131,7 +131,7 @@ class Projects extends React.Component {
                      </p>
                   </div>
                   <figure>
-                     <img src={VelaSerialsPageImage} />
+                     <img src={VelaSerialsPageImage} alt={'Serials Page'} />
                   </figure>
                   <p className="projectExplanation__imageText">
                      Second page included easy way to switch TV shows, ability
@@ -139,8 +139,10 @@ class Projects extends React.Component {
                      <mark> post comments </mark>.
                   </p>
                </section>
+
                <section className="projectExplanation">
                   <h2>Third Page</h2>
+
                   <div className="projectExplanation__problem">
                      <h3>Problem </h3>
                      <p>Common player werent suitable for needed objectives.</p>
@@ -153,7 +155,7 @@ class Projects extends React.Component {
                      </p>
                   </div>
                   <figure>
-                     <img src={VelaSerialPageImage} />
+                     <img src={VelaSerialPageImage} alt="Serial page" />
                   </figure>
                   <p className="projectExplanation__imageText">
                      Now user can easyly manipulate subtitles: <br />
@@ -164,12 +166,12 @@ class Projects extends React.Component {
                <section className="projectStack">
                   <h2> Stack of technologies</h2>
                   <figure>
-                     <img src={HTML5} />
-                     <img src={CSS3} />
-                     <img src={JS} />
-                     <img src={jQuery} />
-                     <img src={PHP} />
-                     <img src={mySQL} />
+                     <img src={HTML5} alt="HTML5" />
+                     <img src={CSS3} alt="CSS3" />
+                     <img src={JS} alt="JS" />
+                     <img src={jQuery} alt="jQuery" />
+                     <img src={PHP} alt="PHP" />
+                     <img src={mySQL} alt="mySQL" />
                   </figure>
                </section>
                <footer className="footer">

@@ -61,14 +61,14 @@ export function MenuButton({
          <div className={isNavShownClass}>
             <ul>
                <li>
-                  <Link to="/aboutMe">
+                  <Link to="/">
                      <img src={aboutMe} alt="About Me" />
                   </Link>
                   <span>About</span>
                </li>
 
                <li>
-                  <Link to="/contacts">
+                  <Link to="/">
                      <img src={myContacts} alt="My Contacts" />
                   </Link>
                   <span> Contacts </span>

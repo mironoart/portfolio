@@ -1,10 +1,11 @@
 import React from 'react'
-import gif from '../media/images/animatedGif.gif'
-export function MainComponent({ text }) {
+import MainPageGif from '../containers/gifAnimationContainer'
+
+export function MainComponent({ text, gif }) {
    return (
       <div className="homeContent">
          <div className="portrait">
-            <img className="projectsBackgroundImg" src={gif} alt="" />
+            <MainPageGif />
          </div>
          <div className="homeAboutMe">
             <h1> {text.h1} </h1>
